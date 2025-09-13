@@ -1,366 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prachurjya Biswas - Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Portfolio</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prachurjya Biswas | Portfolio</title>
+  <meta name="description" content="Prachurjya Biswas — Computer Science student showcasing projects, skills, and achievements.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="Prachurjya Biswas, Portfolio, GitHub, Software Developer, Projects, Skills, Networking, Arduino, Python, React, IoT, Full-Stack, Bangladesh Developer">
+  <meta name="author" content="Prachurjya Biswas">
+
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iamprachu7.github.io">
+  <meta property="og:title" content="Prachurjya Biswas | Portfolio">
+  <meta property="og:description" content="Explore my projects, skills, and journey in software engineering.">
+  <meta property="og:image" content="https://iamprachu7.github.io/Redpanjabi.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://iamprachu7.github.io">
+  <meta name="twitter:title" content="Prachurjya Biswas | Portfolio">
+  <meta name="twitter:description" content="Explore my projects, skills, and journey in software engineering.">
+  <meta name="twitter:image" content="https://iamprachu7.github.io/Redpanjabi.jpg">
+
+  <!-- Preconnect to speed up Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Local stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- NOTE: I removed FontAwesome CDN here and replaced icons with inline SVGs (safer than relying on a third-party JS/CSS CDN for icons).
+       If you prefer FontAwesome, add an integrity attribute (SRI) and crossorigin and keep a close eye on the version you use. -->
+
+  <!-- Helpful hint (set these headers server-side):
+       Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+       X-Content-Type-Options: nosniff
+       X-Frame-Options: DENY
+       Referrer-Policy: no-referrer-when-downgrade
+       Content-Security-Policy: (configure per your resources; better applied as an HTTP header)
+  -->
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">Portfolio</a>
+      </div>
+
+      <button class="hamburger" id="navToggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="primary-navigation">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" aria-labelledby="hero-heading">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 id="hero-heading" class="hero-title">Hi, I'm <span class="highlight">Prachurjya Biswas</span></h1>
+        <p class="hero-subtitle">Computer Science Student</p>
+        <p class="hero-description">Passionate about creating innovative solutions and building user-friendly applications. Building skills in full-stack development with a focus on modern technologies.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#experience" class="btn btn-secondary">View My Work</a>
+          <a href="resume.pdf" download class="btn btn-secondary">Download Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <!-- No inline JS handlers here. The script at the end will handle image errors. -->
+        <img id="heroProfile" src="./Redpanjabi.jpg" alt="Prachurjya Biswas — professional headshot" class="hero-profile-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I am a dedicated Computer Science student with hands-on experience in software development, networking, and hardware engineering. Skilled in Python, Arduino, and Cisco Packet Tracer, I enjoy crafting practical technological solutions, maintaining systems, and tackling challenging problems.</p>
+          <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.</p>
+
+          <div class="about-stats">
+            <div class="stat"><h3>1</h3><p>Year Experience</p></div>
+            <div class="stat"><h3>5</h3><p>Projects Completed</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section (cleaned; removed merge conflict markers) -->
+  <section id="education" class="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Diploma in Computer Science</h3>
+              <span class="timeline-date">2021 - Present</span>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <h4>Sylhet Polytechnic Institute</h4>
+            <p>Diploma student in Computer Science with a strong focus on Software Engineering, Algorithms and Data Structures. Developed multiple projects, including a web application and smart IoT systems, aiming to grow further in software development and networking.</p>
+            <div class="achievements">
+              <span class="achievement">GPA: 3.1 / 4.0</span>
+              <span class="achievement">Dean's List</span>
+              <span class="achievement">Computer Science Honor Society</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>HSC in Computer Technology</h3>
+              <span class="timeline-date">2020 - 2022</span>
+            </div>
+            <h4>Sylhet Technical School &amp; College</h4>
+            <p>Completed HSC in Computer Science with distinction. Actively involved in the Computer Club and participated in multiple coding competitions, building a strong foundation in programming and problem-solving.</p>
+            <div class="achievements">
+              <span class="achievement">GPA: 4.05 / 5.00</span>
+              <span class="achievement">Valedictorian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section (cleaned) -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Computer Lab Assistant (Informal)</h3>
+              <span class="timeline-date">2023 - Present</span>
+            </div>
+            <h4>Sylhet Polytechnic Institute</h4>
+            <p>Assisted with lab system setup, hardware and software troubleshooting, software installation for student use, and network support, including LAN configuration and connectivity testing.</p>
+            <ul class="responsibilities">
+              <li>Provided network support by configuring LAN and performing connectivity testing for 60+ devices.</li>
+              <li>Supported students in designing and building Arduino-based projects for academic and competition purposes.</li>
+              <li>Lab system setup and prepared computers for student use.</li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+          </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Prachurjya Biswas</span></h1>
-                <p class="hero-subtitle">Computer Science Student</p>
-                <p class="hero-description">
-                    Passionate about creating innovative solutions and building user-friendly applications. 
-                    Experienced in full-stack development with a focus on modern technologies.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#experience" class="btn btn-secondary">View My Work</a>
-                </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Freelance PC Builder</h3>
+              <span class="timeline-date">2021 - Present</span>
             </div>
-            <div class="hero-image">
-                <img src="./Redpanjabi.jpg" alt="Professional headshot" class="hero-profile-image" onerror="this.style.display='none'; console.log('Image failed to load:', this.src);">
-            </div>
+            <h4>Self-employed</h4>
+            <p>Designed and built custom desktop PCs tailored for gaming, office, and personal use. Installed and configured operating systems, LAN cards, Wi-Fi adapters, and network drivers. Assisted clients with home and office network setup and internet troubleshooting.</p>
+            <ul class="responsibilities">
+              <li>Designed and built 15+ custom desktop PCs.</li>
+              <li>Installed and configured 30+ operating systems and network adapters.</li>
+              <li>Assisted in 10+ home and office network setups.</li>
+              <li>Resolved 50+ internet and networking issues, improving client reliability.</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                       I am a dedicated Computer Science student with hands-on experience in software development,
-                    networking, and hardware engineering. Skilled in Python, Arduino, and Cisco Packet Tracer, 
-                        I enjoy crafting practical technological solutions, maintaining systems, and tackling challenging problems. 
-                    </p>
-                    <p>
-                        When I'm not coding, you can find me exploring new technologies, contributing 
-                        to open-source projects, or sharing knowledge with the developer community.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>1</h3>
-                            <p>Year Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>5</h3>
-                            <p>Projects Completed</p>
-                        </div>
-<!--                         <div class="stat">
-                            <h3>15+</h3>
-                            <p>Happy Clients</p>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-item">
+          <h3>ESP32 Fire Monitoring System</h3>
+          <p>A smart fire and environmental monitoring system using ESP32 and MicroPython. Features real-time alerts and sensor integration for safety applications. Tech stack: MicroPython, ESP32, Sensors.</p>
+          <img src="esp32-screenshot.jpg" alt="Screenshot of ESP32 Fire Monitoring System" loading="lazy">
+          <div class="project-links">
+            <a href="https://github.com/IamPrachu7/ESP32-Fire-Monitoring-System" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+            <!-- Add live demo if available -->
+          </div>
         </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Diploma in Computer Science</h3>
-                            <span class="timeline-date">2021 - 2025</span>
-                        </div>
-                        <h4>Sylhet Polytechnic Institute</h4>
-                        <p>
-                            Diploma student in Computer Science with a strong focus on Software Engineering, 
-                            Algorithms and Data Structures. Developed multiple projects, including a web application and smart IoT systems, 
-                            aiming to grow further in software development and networking.
-                        </p>
-                        <div class="achievements">
-                            <span class="achievement">CGPA: 3.1/4.0</span>
-                            <span class="achievement">Dean's List</span>
-                            <span class="achievement">Computer Science Honor Society</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>HSC in Computer Technology</h3>
-                            <span class="timeline-date">2020 - 2022</span>
-                        </div>
-                        <h4>Sylhet Technical School & Collage</h4>
-                        <p>
-                            Completed HSC in Computer Science with distinction. Actively involved in the Computer Club 
-                            and participated in multiple coding competitions, building a strong foundation in programming
-                            and problem-solving.
-                        </p>
-                        <div class="achievements">
-                            <span class="achievement">GPA:4.05/5.00</span>
-                            <span class="achievement">National Honor Society</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Computer Lab Assistant (Informal)</h3>
-                            <span class="timeline-date">2023 | Present</span>
-                        </div>
-                        <h4>Sylhet Polytechnic Institute.</h4>
-                        <p>
-                            Assisted with lab system setup, hardware and software troubleshooting, software
-                            installation for student use, and network support, including LAN configuration and
-                            connectivity testing.
-                        </p>
-                        <ul class="responsibilities">
-                            <li>Provided network support by configuring LAN and 
-                                performing connectivity testing for 60+ devices.</li>
-                            <li>Supported students in designing and building Arduino-based 
-                                projects for academic and competition purposes.</li>
-                            <li>Lab system setup and prepared computers for student use.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3> Freelance PC Builder</h3>
-                            <span class="timeline-date">2021 | Present</span>
-                        </div>
-                        <h4>Self-employed</h4>
-                        <p>
-                            Designed and built custom desktop PCs tailored for gaming, office, and personal use.
-                            Installed and configured operating systems, LAN cards, Wi-Fi adapters, and network
-                            drivers. Assisted clients with home and officenetwork setup and internet troubleshooting.
-                        </p>
-                        <ul class="responsibilities">
-                            <li>Designed and built 15+ custom desktop PCs tailored for gaming, office, and personal use.</li>
-                            <li>Installed and configured 30+ operating systems, LAN cards, Wi-Fi adapters, and network drivers for clients.</li>
-                            <li>Assisted in 10+ home and office network setups, ensuring seamless connectivity.</li>
-                            <li>Resolved 50+ internet and networking issues, improving client system reliability by 30%</li>
-                        </ul>
-                    </div>
-                </div>
         
+        <!-- Project 2 -->
+        <div class="project-item">
+          <h3>Image Steganography</h3>
+          <p>A React app for hiding secret messages in images using steganography techniques. Demonstrates frontend skills and data manipulation. Tech stack: React, JavaScript.</p>
+          <img src="steganography-screenshot.jpg" alt="Screenshot of Image Steganography app" loading="lazy">
+          <div class="project-links">
+            <a href="https://github.com/IamPrachu7/ImageSteganography" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-item">
+          <h3>File Organizer</h3>
+          <p>A Python script to automatically organize files by type, date, or custom rules. Useful for automation and file management. Tech stack: Python.</p>
+          <img src="file-organizer-screenshot.jpg" alt="Screenshot of File Organizer script" loading="lazy">
+          <div class="project-links">
+            <a href="https://github.com/IamPrachu7/file-organizer" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+          </div>
+        </div>
+        
+        <!-- Add more projects as needed, e.g., from your GitHub -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">HTML5</span><div class="skill-bar"><div class="skill-progress" style="width:95%" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 proficiency: 95%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">CSS3</span><div class="skill-bar"><div class="skill-progress" style="width:90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 proficiency: 90%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-progress" style="width:85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency: 85%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">React</span><div class="skill-bar"><div class="skill-progress" style="width:80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="React proficiency: 80%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">Node.js</span><div class="skill-bar"><div class="skill-progress" style="width:85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Node.js proficiency: 85%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-progress" style="width:80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency: 80%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-progress" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Java proficiency: 75%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">SQL</span><div class="skill-bar"><div class="skill-progress" style="width:90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="SQL proficiency: 90%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools & Others</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">Git</span><div class="skill-bar"><div class="skill-progress" style="width:90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Git proficiency: 90%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Arduino</span><div class="skill-bar"><div class="skill-progress" style="width:70%" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Arduino proficiency: 70%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">AWS</span><div class="skill-bar"><div class="skill-progress" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="AWS proficiency: 75%"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Computer Hardware</span><div class="skill-bar"><div class="skill-progress" style="width:85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Computer Hardware proficiency: 85%"></div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <!-- Inline SVG icon used instead of FontAwesome -->
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><title>Email</title><path d="M2 5.5A2.5 2.5 0 014.5 3h15A2.5 2.5 0 0122 5.5v13A2.5 2.5 0 0119.5 21h-15A2.5 2.5 0 012 18.5v-13zM4.5 6.5L12 11l7.5-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:iamprachu7@gmail.com">iamprachu7@gmail.com</a></p>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">HTML5</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">CSS3</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">React</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">SQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Networking</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Arduino</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Git</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Computer Hardware</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="contact-item">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><title>Phone</title><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 013 5.18 2 2 0 015 3h3a2 2 0 0 1 2 1.72c.12.9.38 1.77.77 2.58a2 2 0 0 1-.45 2.11L9.91 10.9a16 16 0 0 0 5.33 5.33l1.5-1.5a2 2 0 0 1 2.11-.45c.81.39 1.68.65 2.58.77A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <div>
+              <h3>Phone</h3>
+              <p><a href="tel:+8801752529233">+880 1752-529233</a></p>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p><a href="mailto:iamprachu7@gmail.com">iamprachu7@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p><a href="tel:+8801752529233">+880 1752-529233</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Sylhet, Bangladesh</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/iamprachu7/" target="_blank" class="social-link" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/IamPrachu7" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://x.com/IamPrachu7" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form" action="#" method="POST" role="form">
-                    <fieldset>                  
-                        <legend>Contact Form</legend>
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Your Message</label>
-                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                    </fieldset>
-                </form>
+          <div class="contact-item">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><title>Location</title><path d="M21 10c0 7-9 11-9 11s-9-4-9-11a9 9 0 1118 0z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2" fill="none" stroke="currentColor" stroke-width="1.5"></circle></svg>
+            <div>
+              <h3>Location</h3>
+              <p>Sylhet, Bangladesh</p>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Prachurjya Biswas. All rights reserved.</p>
+          <div class="social-links" aria-label="Social links">
+            <!-- Add rel="noopener noreferrer" to any target="_blank" links -->
+            <a href="https://www.linkedin.com/in/iamprachu7/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <!-- LinkedIn SVG -->
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+            <a href="https://github.com/IamPrachu7" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <!-- GitHub SVG -->
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0016 4.77 5.07 5.07 0 0015.76 1S14.5.65 12 2.48C9.5.65 8.24 1 8.24 1A5.07 5.07 0 007 4.77 5.44 5.44 0 002 10.5c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 007.5 20.13V24"></path></svg>
+            </a>
+            <a href="https://x.com/IamPrachu7" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+              <!-- Twitter/X SVG -->
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012.07 8v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
-    </body>
+        <!-- Contact form - NOTE: the backend is REQUIRED for secure handling. Replace the action with your server endpoint or a form provider (Formspree, Netlify forms, etc.). -->
+        <!-- TODO: Replace action with real endpoint (e.g., https://formspree.io/f/your-id) once backend ready -->
+        <form class="contact-form" id="contactForm" action="#" method="POST" aria-labelledby="contact-heading" autocomplete="on">
+          <fieldset>
+            <legend id="contact-heading">Contact Form</legend>
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+
+            <!-- Honeypot field (hidden) to reduce bots; server must ignore it if filled -->
+            <div style="display:none;" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024-2025 Prachurjya Biswas. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- External script loaded from local file. Keep JS external (avoid inline JS) to allow stronger CSPs. -->
+  <script src="script.js" defer></script>
+
+  <!-- Small inline script only for safe startup actions: attach image error handler and hamburger toggle.
+       (If you prefer an entirely header-only CSP, move this code into script.js and remove inline script.) -->
+  <script>
+    // We avoid inline event attributes in HTML. This small script attaches events safely.
+    (function(){
+      // image error handling
+      var img = document.getElementById('heroProfile');
+      if(img){
+        img.addEventListener('error', function(){
+          // hide the image when it fails to load
+          img.style.display = 'none';
+          console.warn('Hero image failed to load:', img.src);
+        });
+      }
+
+      // mobile nav toggle (hamburger)
+      var navToggle = document.getElementById('navToggle');
+      var navMenu = document.getElementById('primary-navigation');
+      if(navToggle && navMenu){
+        navToggle.addEventListener('click', function(){
+          var expanded = this.getAttribute('aria-expanded') === 'true' || false;
+          this.setAttribute('aria-expanded', !expanded);
+          navMenu.classList.toggle('open');
+        });
+      }
+
+      // Basic client-side form handling example (prevents default submit when action is '#')
+      var form = document.getElementById('contactForm');
+      if(form && form.getAttribute('action') === '#'){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          // Tell user how to set up a real backend or provider instead of sending data to nowhere.
+          alert('This form is configured as a frontend demo.\nTo receive messages, configure a secure backend endpoint or use a form provider (Formspree, Netlify Forms, etc.).');
+        });
+      }
+    })();
+  </script>
+</body>
 </html>
