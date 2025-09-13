@@ -32,16 +32,6 @@
   <!-- Local stylesheet -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- NOTE: I removed FontAwesome CDN here and replaced icons with inline SVGs (safer than relying on a third-party JS/CSS CDN for icons).
-       If you prefer FontAwesome, add an integrity attribute (SRI) and crossorigin and keep a close eye on the version you use. -->
-
-  <!-- Helpful hint (set these headers server-side):
-       Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-       X-Content-Type-Options: nosniff
-       X-Frame-Options: DENY
-       Referrer-Policy: no-referrer-when-downgrade
-       Content-Security-Policy: (configure per your resources; better applied as an HTTP header)
-  -->
 </head>
 <body>
   <!-- Navigation -->
@@ -108,7 +98,7 @@
     </div>
   </section>
 
-  <!-- Education Section (cleaned; removed merge conflict markers) -->
+  <!-- Education Section  -->
   <section id="education" class="education">
     <div class="container">
       <h2 class="section-title">Education</h2>
@@ -117,13 +107,13 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <h3>Diploma in Computer Science</h3>
-              <span class="timeline-date">2021 - Present</span>
+              <span class="timeline-date">2023 - Present</span>
             </div>
             <h4>Sylhet Polytechnic Institute</h4>
             <p>Diploma student in Computer Science with a strong focus on Software Engineering, Algorithms and Data Structures. Developed multiple projects, including a web application and smart IoT systems, aiming to grow further in software development and networking.</p>
             <div class="achievements">
               <span class="achievement">GPA: 3.1 / 4.0</span>
-              <span class="achievement">Dean's List</span>
+              <span class="achievement">Python Project</span>
               <span class="achievement">Computer Science Honor Society</span>
             </div>
           </div>
@@ -139,7 +129,6 @@
             <p>Completed HSC in Computer Science with distinction. Actively involved in the Computer Club and participated in multiple coding competitions, building a strong foundation in programming and problem-solving.</p>
             <div class="achievements">
               <span class="achievement">GPA: 4.05 / 5.00</span>
-              <span class="achievement">Valedictorian</span>
             </div>
           </div>
         </div>
@@ -147,7 +136,7 @@
     </div>
   </section>
 
-  <!-- Experience Section (cleaned) -->
+  <!-- Experience Section  -->
   <section id="experience" class="experience">
     <div class="container">
       <h2 class="section-title">Work Experience</h2>
@@ -367,11 +356,9 @@
     </div>
   </footer>
 
-  <!-- External script loaded from local file. Keep JS external (avoid inline JS) to allow stronger CSPs. -->
+
   <script src="script.js" defer></script>
 
-  <!-- Small inline script only for safe startup actions: attach image error handler and hamburger toggle.
-       (If you prefer an entirely header-only CSP, move this code into script.js and remove inline script.) -->
   <script>
     // We avoid inline event attributes in HTML. This small script attaches events safely.
     (function(){
